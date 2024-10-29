@@ -7,7 +7,8 @@ def tabulas_izveide():
     cur = conn.cursor()
     cur.execute(
         """
-        CREATE TABLE cilveki(
+        DROP TABLE CILVEKI;
+        CREATE TABLE skoleni(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         vards TEXT NOT NULL,
         uzvards TEXT NOT NULL
@@ -16,4 +17,4 @@ def tabulas_izveide():
     )
     conn.commit()
 
-# tabulas_izveide()
+tabulas_izveide()
